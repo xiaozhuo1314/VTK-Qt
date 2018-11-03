@@ -16,7 +16,7 @@ void MainWindow::textureMappingCylinder()
     //source
     //读取jpeg的二维图
     vtkSmartPointer<vtkJPEGReader> reader = vtkSmartPointer<vtkJPEGReader>::New();
-    reader->SetFileName("/home/silence/Project/VTK-Qt/textureMapping/texture.jpg");
+    reader->SetFileName("../textureMapping/texture.jpg");
 
     //定义到纹理图
     vtkSmartPointer<vtkTexture> texture = vtkSmartPointer<vtkTexture>::New();
