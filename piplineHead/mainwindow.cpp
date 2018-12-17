@@ -20,7 +20,7 @@ void MainWindow::piplineHead()
     //用移动立方体方法提取等值面,即用立方体划分复杂体
     vtkSmartPointer<vtkMarchingCubes> marchingCubes = vtkSmartPointer<vtkMarchingCubes>::New();
     marchingCubes->SetInputConnection(reader->GetOutputPort());
-    marchingCubes->SetValue(0, 500);
+    marchingCubes->SetValue(0, 500); //设置第i个等值面的值为value
 
     //mapper
     vtkSmartPointer<vtkPolyDataMapper> mapper = vtkSmartPointer<vtkPolyDataMapper>::New();
