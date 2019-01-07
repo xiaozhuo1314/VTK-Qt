@@ -27,7 +27,7 @@ void MainWindow::headMHD()
     //就是说像素在这个范围的能够呈现出来
     viewer->SetColorLevel(500);
     viewer->SetColorWindow(2000);
-    viewer->SetSlice(40);  //设置边界大小
+    viewer->SetSlice(40);  //默认显示第40个切片
     viewer->SetSliceOrientationToXY();
     viewer->Render();
     viewer->GetRenderer()->SetBackground(1, 1, 1);
