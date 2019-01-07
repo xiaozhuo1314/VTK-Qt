@@ -18,6 +18,7 @@ void MainWindow::readWriteSingleImage()
     pngReader->SetFileName("/home/silence/Project/VTK-Qt/readWriteSingleImage/VTK-logo.png");
 
     //显示图像
+    //vtkActor、vtkRenderer、vtkRenderWindow等已经封装在vtkImageViewer2中，可视化管线执行时只需要vtkRenderWindowInteractor即可，但是用到这些类具体功能的话还是需要将头文件包含进去
     vtkSmartPointer<vtkImageViewer2> viewer = vtkSmartPointer<vtkImageViewer2>::New();
     viewer->SetInputConnection(pngReader->GetOutputPort());
     viewer->Render();
