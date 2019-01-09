@@ -15,7 +15,8 @@ void MainWindow::color2gray()
 {
     vtkSmartPointer<vtkBMPReader> reader = vtkSmartPointer<vtkBMPReader>::New();
     reader->SetFileName("/home/silence/Project/VTK-Qt/color2Gray/lena.bmp");
-
+    
+    //luminance = 0.3*R + 0.59*G + 0.11*B
     vtkSmartPointer<vtkImageLuminance> luminanceFilter = vtkSmartPointer<vtkImageLuminance>::New();
     luminanceFilter->SetInputConnection(reader->GetOutputPort());   //用SetInputData不行
     luminanceFilter->Update();
