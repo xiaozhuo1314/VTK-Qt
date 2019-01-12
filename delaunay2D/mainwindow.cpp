@@ -66,7 +66,7 @@ void MainWindow::delaunay2D()
     renderWindowInteractor->Start();
 }
 
-void MainWindow::delaunay2DConstrained()
+void MainWindow::delaunay2DConstrained()  //代边界约束
 {
     vtkSmartPointer<vtkPoints> points = vtkSmartPointer<vtkPoints>::New();
 
