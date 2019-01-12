@@ -13,6 +13,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::modelExtract()
 {
+    //三个提取类vtkDecimatePro、vtkQuadricDecimation、vtkQuadricClustering
     vtkSmartPointer<vtkPolyDataReader> reader = vtkSmartPointer<vtkPolyDataReader>::New();
     reader->SetFileName("/home/silence/Project/VTK-Qt/modelExtract/fran_cut.vtk");
     reader->Update();
